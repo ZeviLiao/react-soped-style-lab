@@ -1,7 +1,7 @@
 
 
 import React from 'react'
-import './hello.scoped.css'
+import './hello.scoped.scss'
 
 const hello = () => {
     return (
