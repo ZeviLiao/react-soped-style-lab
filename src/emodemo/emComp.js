@@ -1,25 +1,32 @@
-import React, { Component } from 'react'
-import { jsx, css, Global } from "@emotion/core";
 
-const color = 'white'
+import React from 'react'
+import { jsx, css } from '@emotion/core'
 
-export const emComp = () => {
+const style = css`
+  color: hotpink;
+`
+
+const SomeComponent = ({ children }) => (
+    <div css={style}>
+        Some hotpink text.
+        {children}
+    </div>
+)
+
+const anotherStyle = css({
+    textDecoration: 'underline'
+})
+
+const AnotherComponent = () => (
+    <div css={anotherStyle}>Some text with an underline.</div>
+)
+/** @jsx jsx */
+const emComp = () => {
     return (
-        <div
-        className={css`
-          padding: 32px;
-          background-color: hotpink;
-          font-size: 24px;
-          border-radius: 4px;
-          &:hover {
-            color: ${color};
-          }
-        `}
-      >
-        Hover to change color.
-      </div>
+        <SomeComponent>
+            <AnotherComponent />
+        </SomeComponent>
     )
 }
-
 
 export default emComp
