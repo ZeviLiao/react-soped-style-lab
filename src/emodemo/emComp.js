@@ -1,4 +1,4 @@
-
+/** @jsx jsx */
 import React from 'react'
 import { jsx, css } from '@emotion/core'
 
@@ -20,7 +20,7 @@ const anotherStyle = css({
 const AnotherComponent = () => (
     <div css={anotherStyle}>Some text with an underline.</div>
 )
-/** @jsx jsx */
+
 const emComp = () => {
     return (
         <SomeComponent>
